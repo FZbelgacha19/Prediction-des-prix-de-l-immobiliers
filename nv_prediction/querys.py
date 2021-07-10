@@ -2,8 +2,7 @@ from pymongo import MongoClient,ASCENDING
 
 def dbPridectionPrix():
     client = MongoClient('localhost:27017')
-    return client.PridectionPrix
-
+    return client.Predict_Price_V1
 
 def getZoneList():
     db = dbPridectionPrix()

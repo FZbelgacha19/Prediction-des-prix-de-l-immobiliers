@@ -1,0 +1,152 @@
+.btn .feather {
+  width: 14px;
+  height: 14px;
+}
+
+.btn-space-cadet, .btn-space-cadet:focus, .btn-space-cadet.focus, .btn-space-cadet.disabled, .btn-space-cadet:disabled,
+.show > .btn-space-cadet.dropdown-toggle {
+  color: #1a2238ff !important;
+  border-color: #1a2238ff !important;
+  border-radius: 20px !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  background: inherit !important;
+}
+
+.btn-space-cadet:hover:not(:disabled):not(.disabled), .btn-space-cadet.hover:not(:disabled):not(.disabled) {
+  color: white !important;
+  background: #1a2238ff !important;
+}
+
+.btn-maximum-blue-purple, .btn-maximum-blue-purple:focus, .btn-maximum-blue-purple.focus, .btn-maximum-blue-purple.disabled, .btn-maximum-blue-purple:disabled,
+.show > .btn-maximum-blue-purple.dropdown-toggle {
+  color: #9daaf2ff !important;
+  border-color: #9daaf2ff !important;
+  border-radius: 20px !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  background: inherit !important;
+}
+
+.btn-maximum-blue-purple:hover:not(:disabled):not(.disabled), .btn-maximum-blue-purple.hover:not(:disabled):not(.disabled) {
+  color: white !important;
+  background: #9daaf2ff !important;
+}
+
+.btn-outrageous-orange, .btn-outrageous-orange:focus, .btn-outrageous-orange.focus, .btn-outrageous-orange.disabled, .btn-outrageous-orange:disabled,
+.show > .btn-outrageous-orange.dropdown-toggle {
+  color: #ff6a3dff !important;
+  border-color: #ff6a3dff !important;
+  border-radius: 20px !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  background: inherit !important;
+}
+
+.btn-outrageous-orange:hover:not(:disabled):not(.disabled), .btn-outrageous-orange.hover:not(:disabled):not(.disabled) {
+  color: white !important;
+  background: #ff6a3dff !important;
+}
+
+.btn-jasmine, .btn-jasmine:focus, .btn-jasmine.focus, .btn-jasmine.disabled, .btn-jasmine:disabled,
+.show > .btn-jasmine.dropdown-toggle {
+  color: #f4db7dff !important;
+  border-color: #f4db7dff !important;
+  border-radius: 20px !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  background: inherit !important;
+}
+
+.btn-jasmine:hover:not(:disabled):not(.disabled), .btn-jasmine.hover:not(:disabled):not(.disabled) {
+  color: white !important;
+  background: #f4db7dff !important;
+}
+
+.bg-space-cadet {
+  background: #1a2238ff !important;
+}
+
+.bg-maximum-blue-purple {
+  background: #9daaf2ff !important;
+}
+
+.bg-outrageous-orange {
+  background: #ff6a3dff !important;
+}
+
+.bg-jasmine {
+  background: #f4db7dff !important;
+}
+
+.txt-space-cadet {
+  color: #1a2238ff !important;
+}
+
+.txt-maximum-blue-purple {
+  color: #9daaf2ff !important;
+}
+
+.txt-outrageous-orange {
+  color: #ff6a3dff !important;
+}
+
+.txt-jasmine {
+  color: #f4db7dff !important;
+}
+
+.txt-10 {
+  font-size: 10px !important;
+}
+
+.txt-12 {
+  font-size: 12px !important;
+}
+
+.txt-14 {
+  font-size: 14px !important;
+}
+
+.txt-16 {
+  font-size: 16px !important;
+}
+
+.txt-18 {
+  font-size: 18px !important;
+}
+
+.txt-20 {
+  font-size: 20px !important;
+}
+
+.txt-22 {
+  font-size: 22px !important;
+}
+
+.txt-24 {
+  font-size: 24px !important;
+}
+
+.txt-26 {
+  font-size: 26px !important;
+}
+
+.txt-28 {
+  font-size: 28px !important;
+}
+
+.txt-30 {
+  font-size: 30px !important;
+}
+
+.txt-MontserratRegular {
+  font-family: MontserratRegular !important;
+}
+
+.txt-MontserratBold {
+  font-family: MontserratBold !important;
+}
+
+.txt-ABeeZee {
+  font-family: ABeeZee !important;
+}

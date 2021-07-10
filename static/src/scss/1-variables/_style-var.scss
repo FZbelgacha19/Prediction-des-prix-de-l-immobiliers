@@ -1,0 +1,35 @@
+//Colors --new added
+$space-cadet: #1a2238ff !default;
+$maximum-blue-purple: #9daaf2ff !default;
+$outrageous-orange: #ff6a3dff !default;
+$jasmine: #f4db7dff !default;
+
+$theme-colors: (
+  "space-cadet": $space-cadet,
+  "maximum-blue-purple": $maximum-blue-purple,
+  "outrageous-orange": $outrageous-orange,
+  "jasmine": $jasmine,
+) !default;
+
+
+$text-size: (
+  "10": 10px,
+  "12": 12px,
+  "14": 14px,
+  "16": 16px,
+  "18": 18px,
+  "20": 20px,
+  "22": 22px,
+  "24": 24px,
+  "26": 26px,
+  "28": 28px,
+  "30": 30px
+
+) !default;
+
+
+$fonts-family:(
+  'MontserratRegular':MontserratRegular,
+  'MontserratBold':MontserratBold,
+  'ABeeZee':ABeeZee
+) !default;

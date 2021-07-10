@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block page_title %}
+    Profile
+{% endblock page_title %}
+
+{% block content %}
+<main class="content bg-cover-1">
+  <div class="container-fluid p-0">
+    <div class="mb-5">
+  <h1><span class="txt-MontserratBold txt-30 txt-space-cadet">Profile</span></h1>
+  </div>
+<div style="width: 70%;">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="my-2">
+        <label for="description">Description : </label>
+        {{ form.description}}
+        </div>
+        <div class="file-input my-2">
+        {{ form.photo}}
+        </div>
+        {% comment %} {{ form.description|as_crispy_field}}<br>
+        {{ form.photo|as_crispy_field }} {% endcomment %}
+        <button  class="btn btn-outrageous-orange txt-ABeeZee float-end m-1 p-2" type="submit">enregistre</button>
+      </form>
+</div>
+</div>
+</main>
+
+{% endblock content %}

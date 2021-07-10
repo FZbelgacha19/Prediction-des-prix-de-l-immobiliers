@@ -1,0 +1,11 @@
+@mixin text-color($color) {
+    color : $color !important;
+}
+
+@mixin text-size($size){
+    font-size: $size !important;
+}
+
+@mixin text-font($font) {
+    font-family: $font !important;
+}

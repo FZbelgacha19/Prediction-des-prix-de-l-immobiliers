@@ -1,0 +1,11 @@
+.btn .feather {
+    width: 14px;
+    height: 14px;
+}
+  
+  @each $color, $value in $theme-colors {
+    .btn-#{$color} {
+      @include button-color($value);
+      @include button-color-hover($value);
+    }
+  }

@@ -1,0 +1,25 @@
+{% load static %}
+<nav class="navbar navbar-expand navbar-light navbar-bg bg-space-cadet">
+  <a class="sidebar-brand p-0" href="{% url 'index' %}" style="color: black">
+    <img src="{% static 'img/icons/icon-48x48.png'%}" height="30">
+    <span class="align-middle txt-MontserratBold txt-jasmine">Prédiction des prix</span>
+  </a>
+
+  <div class="navbar-collapse collapse">
+    <ul class="navbar-nav navbar-align">
+      
+      <li class="nav-item">
+        <a class="p-2 mx-1 txt-jasmine" href="{% url 'login' %}">
+          <i class="align-middle txt-ABeeZee" data-feather="log-in"></i>
+          <span class="align-middle txt-ABeeZee txt-16">connecter</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="p-2 mx-1 btn-jasmine" href="{% url 'signup' %}">
+          <i class="align-middle" data-feather="user-plus"></i>
+          <span class="align-middle txt-ABeeZee txt-16">S'inscrire</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

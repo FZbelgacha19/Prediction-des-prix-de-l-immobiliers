@@ -1,0 +1,43 @@
+<nav id="sidebar" class="sidebar js-sidebar">
+        <div>
+          <a class="sidebar-brand" href="{% url 'home' %}">
+            <span class="align-middle">Prédiction des prix</span>
+          </a>
+        </div>
+        <ul class="sidebar-nav" id="sidebar_nav">
+          <li class="sidebar-header">Pages</li>
+
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'statistique:statistique_view' %}">
+              <i class="align-middle" data-feather="sliders"></i>
+              <span class="align-middle">Statistique</span>
+            </a>
+          </li>
+
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'user_profile:index_profile' %}">
+              <i class="align-middle" data-feather="user"></i>
+              <span class="align-middle">Profile</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'nv_prediction:main'%}">
+              <i class="align-middle" data-feather="home"></i>
+              <span class="align-middle">Nouveau prédiction</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'immeubles:immeubles_view' %}">
+              <i class="align-middle" data-feather="pie-chart"></i>
+              <span class="align-middle">Immeubles</span>
+            </a>
+          </li>
+
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'logout' %}">
+              <i class="align-middle" data-feather="log-in"></i>
+              <span class="align-middle">Déconnecter</span>
+            </a>
+          </li>
+        </ul>
+      </nav>

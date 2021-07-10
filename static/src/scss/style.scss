@@ -1,0 +1,12 @@
+// Variables
+@import "1-variables/style-var";
+
+
+// Theme mixins
+@import "2-mixins/button-style";
+@import "2-mixins/background";
+@import "2-mixins/text-config";
+
+@import "3-components/buttons-style";
+@import "3-components/backgrounds";
+@import "3-components/texts-config";

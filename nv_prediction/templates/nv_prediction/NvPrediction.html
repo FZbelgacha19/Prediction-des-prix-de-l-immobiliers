@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% load crispy_forms_tags %} 
+
+
+{% block page_title %} Nouveau
+Prédiction {% endblock page_title %}
+
+
+{% block content %}
+
+<main class="content bg-cover-1">
+  <div class="container-fluid px-5 mt-5">
+  <div class="mb-5">
+  <h1><span class="txt-MontserratBold txt-30 txt-space-cadet">Nouveau Prédiction</span></h1>
+  </div>
+    <form method="POST" for="NV_Pred_Form">
+      {% csrf_token %}
+
+      <div class="row p-3">
+        <div class="col texte">
+          {{form.zone.label_tag}} {{form.zone}}
+          <small
+            ><a href="{% url 'nv_prediction:district' %}"
+              >voir votre zone</a
+            ></small
+          >
+        </div>
+        <div class="col texte">{{form.etat.label_tag}} {{form.etat}}</div>
+      </div>
+
+      <div class="row p-3">
+        <div class="col texte">
+          {{form.typeBien.label_tag}} {{form.typeBien}}
+        </div>
+        <div class="col texte">
+          {{form.nomberEtage.label_tag}} {{form.nomberEtage}}
+        </div>
+        <div class="col texte">{{form.surface.label_tag}} {{form.surface}}</div>
+      </div>
+
+      <div class="d-flex justify-content-center mt-5">
+
+         
+          <button type="submit" class="btn btn-space-cadet m-1 px-4 py-1 txt-16">
+            Prédire
+          </button>
+
+           <button
+            type="reset"
+            class="btn btn-outrageous-orange txt-16 m-1 px-4 py-1"
+            onClick="window.location.href=window.location.href"
+          >
+            Vider
+          </button>
+
+      </div>
+    </form>
+
+    <div class="row p-3">
+      <p class="col-auto txt-16 txt-MontserratRegular txt-space-cadet">{{resultat}}</p>
+    </div>
+  </div>
+</main>
+
+{% endblock content %}

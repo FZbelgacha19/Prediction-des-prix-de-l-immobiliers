@@ -1,0 +1,41 @@
+
+@font-face {
+	font-family: 'MontserratRegular';
+	src: url('../fonts/Montserrat/montserrat-v15-latin-regular.eot');
+	/* IE9 Compat Modes */
+	src: local(''),
+		url('../fonts/Montserrat/montserrat-v15-latin-regular.eot?#iefix')
+		format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Montserrat/montserrat-v15-latin-regular.woff2')
+		format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Montserrat/montserrat-v15-latin-regular.woff')
+		format('woff'), /* Modern Browsers */
+       url('../fonts/Montserrat/montserrat-v15-latin-regular.ttf')
+		format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+	font-family: 'MontserratBold';
+	src: url('../fonts/Montserrat/montserrat-Bold.eot');
+	/* IE9 Compat Modes */
+	src: local(''), url('../fonts/Montserrat/Montserrat-Bold?#iefix')
+		format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Montserrat/Montserrat-Bold.woff') format('woff'),
+		/* Modern Browsers */
+       url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype')
+		/* Safari, Android, iOS */
+}
+
+/* abeezee-regular - latin */
+@font-face {
+  font-family: 'ABeeZee';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/abeezee-v14-latin/abeezee-v14-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/abeezee-v14-latin/abeezee-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/abeezee-v14-latin/abeezee-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/abeezee-v14-latin/abeezee-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/abeezee-v14-latin/abeezee-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/abeezee-v14-latin/abeezee-v14-latin-regular.svg#ABeeZee') format('svg'); /* Legacy iOS */
+}

@@ -1,0 +1,150 @@
+{% extends "base.html" %} {% load crispy_forms_tags %} 
+
+
+{% block page_title %}
+Statistique
+{% endblock page_title %}
+
+
+{% block content %}
+
+<main class="content bg-cover-1">
+  <div class="container-fluid px-5 mt-5">
+  <div class="mb-5">
+  <h1><span class="txt-MontserratBold txt-30 txt-space-cadet">Statistiques</span></h1>
+  </div>
+    <div class="shadow rounded bg-body">
+        <canvas id="Line_chart">
+        Your browser does not support the canvas tag
+        </canvas>
+    </div>
+
+  <div class="row bg-light mt-5">
+    <div class="col">
+        <div class="chart chart-xs">
+            <canvas id="Pie_chart_District" class="chartjs-render-monitor">
+                    Your browser does not support the canvas tag
+            </canvas>
+        </div>
+    </div>
+    <div class="col">
+        <div class="chart chart-xs">
+            <canvas id="Pie_chart_Bien" class="chartjs-render-monitor">
+                Your browser does not support the canvas tag
+            </canvas>
+        </div>
+    </div>
+  </div>
+
+  </div>
+</main>
+
+{% endblock content %}
+
+{% block script %}
+<script type="text/javascript">
+      var Line_chart = document.getElementById('Line_chart');
+      var line = Line_chart.getContext('2d');
+      var lineChart = new Chart(line, {
+            type: 'line',
+            data: {
+              labels: {{LineLabels|safe}},
+              datasets:[
+              {% for d in LineDatasets  %}
+                {
+                  data: {{d.data}},
+                  label:"{{d.label}}",
+                  fill:false,
+                  borderColor:"{{d.borderColor}}",
+                  backgroundColor:"{{d.backgroundColor}}",
+                  borderWidth:1
+                },
+              {% endfor %}
+              ]
+            },
+          options:{
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            },
+            plugins:
+            {
+              title: {
+                  display: true,
+                  text: 'Variante des prix par les années selon les districts'
+              }
+            }
+          }
+  });
+    var district_pie = document.getElementById('Pie_chart_District').getContext('2d');
+        var DistrictPieChart = new Chart(district_pie, {
+            type: 'doughnut',
+            data: {
+              {% for p in PieData_1 %}
+              labels: {{p.label|safe }},
+              datasets: [{ 
+                  data: {{p.data|safe }},
+                  borderColor:{{p.borderColor|safe }},
+                  backgroundColor:{{p.backgroundColor|safe }},
+                  borderWidth:1,
+                }]
+              {% endfor %}
+            },
+          options: {
+            responsive: true,
+            scales: {
+              xAxes: [{ 
+                display: false,
+              }],
+              yAxes: [{
+                display: false,
+              }],
+            },
+            plugins:
+            {
+              title: {
+                  display: true,
+                  text: 'District plus dominant'
+              }
+            }
+          },
+
+        });
+        var Bien_pie = document.getElementById('Pie_chart_Bien').getContext('2d');
+        var BienPieChart = new Chart(Bien_pie, {
+            type: 'doughnut',
+            data: {
+              {% for p in PieData_2 %}
+              labels: {{p.label|safe }},
+              datasets: [{ 
+                  data: {{p.data|safe }},
+                  borderColor:{{p.borderColor|safe }},
+                  backgroundColor:{{p.backgroundColor|safe }},
+                  borderWidth:1,
+                }]
+              {% endfor %}
+            },
+          options: {
+            responsive: true,
+            scales: {
+              xAxes: [{ 
+                display: false,
+              }],
+              yAxes: [{
+                display: false,
+              }],
+            },
+            plugins:
+            {
+              title: {
+                  display: true,
+                  text: 'Type de bien plus dominant'
+              }
+            }
+          },
+
+        });
+</script>
+{% endblock script %}

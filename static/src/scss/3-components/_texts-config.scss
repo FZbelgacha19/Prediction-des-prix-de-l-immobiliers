@@ -1,0 +1,19 @@
+@each $color, $value in $theme-colors {
+    .txt-#{$color} {
+      @include text-color($value);
+    }
+
+}
+
+@each $key, $value in $text-size{
+    .txt-#{$key} {
+      @include text-size($value);
+    }
+}
+
+
+@each $key, $value in $fonts-family{
+  .txt-#{$key} {
+    @include text-font($value);
+  }
+}

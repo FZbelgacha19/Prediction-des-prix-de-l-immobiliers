@@ -14,7 +14,7 @@ class predict(models.Model):
     surface = models.IntegerField(verbose_name="Surface",null=False)
     surface_pc = models.IntegerField(verbose_name="Surface couvert",null=False)
     surface_pt = models.IntegerField(verbose_name="Surface terre",null=False)
-    avec_toit = models.BooleanField()
+    avec_toit = models.CharField(verbose_name="Vente Toit",choices=(('oui','oui'),('non','non')),null=False)
 
     class Meta:
         abstract = True
@@ -43,10 +43,10 @@ class PredictForm(forms.ModelForm):
                 'typeBien': forms.Select(attrs={'class': 'form-control'}),
                 'etat': forms.Select(attrs={'class': 'form-control'}),
                 'nomberEtage': forms.NumberInput(attrs={'class': 'form-control','placeholder': u'Nb etage + red chausser','min':1,'max': 30}),
-                'surface': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': u'surface de logement'}),
-                'surface_pc': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': u'surface couvert'}),
-                'surface_pt': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': u'surface de terre reset'}),
-                'avec_toit':forms.CheckboxInput(attrs={'class': 'form-control'})
+                'surface': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': u'surface de logement','id':'surface'}),
+                'surface_pc': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': u'surface couvert','id':'surface_pc'}),
+                'surface_pt': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': u'surface de terre reset','readonly': True,'id':'surface_pt'}),
+                'avec_toit':forms.Select(attrs={'class': 'form-control'})
             
             }
 

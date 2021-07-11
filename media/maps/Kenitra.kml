@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Kénitra(DE:20/07/2015)</name>
+    <NetworkLink>
+      <name>Référentiel de Rabat(DE:12/10/2015);Skhirat-Témara(DE:12/10/2015);Kénitra(DE:20/07/2015);Salé(DE:12/10/2015);Khémisset(DE:29/12/2016)</name>
+      <Link>
+        <href><![CDATA[https://www.google.com/maps/d/u/0/kml?forcekml=1&mid=1tM9GkPCv65nZ1anifXwpqRaUxK0&lid=3or1pK9bJXs]]></href>
+      </Link>
+    </NetworkLink>
+  </Document>
+</kml>

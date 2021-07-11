@@ -1,57 +1,17 @@
-{% extends "base.html" %} {% load crispy_forms_tags %}
-
-
-{% block page_title %}
-Nouveau Prédiction
-{% endblock page_title %}
-
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+  {% block page_title %}
+    Nouveau Prédiction
+  {% endblock page_title %}
 
 {% block content %}
-
-<main class="content bg-cover-1">
-  <div class="container-fluid p-0">
-  <div class="mb-5">
-  <h1><span class="txt-MontserratBold txt-30 txt-space-cadet">Chercher votre district</span></h1>
+  <main class="content bg-cover-1">
+  <div class="mb-2">
+  <h1><span class="txt-MontserratBold txt-30 txt-space-cadet">Trouver votre district</span></h1>
   </div>
-    <div class="Dist_Control">
-      <div class="mt-5 mb-2 px-3">
-        <form class="d-flex" method="post" action="">
-          {% csrf_token %}
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-            name="search"
-            
-          />
-          <button class="btn btn-outrageous-orange mx-2 mt-2 py-0 txt-14" type="submit">
-          <i class="align-middle" data-feather="search"></i>
-              </button>
-        </form>
-      </div>
-      <div>
-
-<div class="DivScroll">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <th>Zone</th>
-            <th>Code_zone</th>
-            <th>Quartiers</th>
-          </thead>
-          {% for d in District_data %}
-          <tr>
-            <th scope="row">{{d.zone}}</th>
-            <td>{{d.code_zone}}</td>
-            <td>{{d.quartiers}}</td>
-          </tr>
-
-          {% endfor %}
-        </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
-
+    <iframe src="https://www.google.com/maps/d/embed?mid=1tM9GkPCv65nZ1anifXwpqRaUxK0"
+    style="height: 95%; width: 100%">
+    </iframe>
+  </main>
 {% endblock content %}

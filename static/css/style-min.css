@@ -39,7 +39,7 @@
 
 .bg-cover-1{
     /* background: #F4DB7D !important; */
-    background-image: url('/static/img/photos/cover.svg');
+    /* background-image: url('/static/img/photos/cover.svg'); */
     background-repeat : no-repeat;
     background-position:right bottom;
 	/* background-attachment : scroll; */

@@ -7,38 +7,40 @@ def dbPridectionPrix():
 def getZoneList():
     db = dbPridectionPrix()
     zn = db.Zone
-    listZone = list(zn.find({},{"_id":0, "zone_name":1, "zone_key":1}).sort([("zone_abr",1)]))
+    # listZone = list(zn.find({},{"_id":0, "zone_name":1, "zone_key":1}).sort([("zone_abr",1)]))
+    listZone = list(zn.find({},{"_id":0,"zone_abr":0}).sort([("zone_abr",1)]))
     ZoneTuple = ()
     for dict in listZone:
         values = ()
         for key, value in dict.items():
-            values += (str(value),)
-        ZoneTuple +=(values[::-1],)
+            values += (str(value),) 
+        ZoneTuple +=(values,)
+    # print(ZoneTuple)
     return ZoneTuple
 
 def getTypeBien():
     db = dbPridectionPrix()
     type = db.type_bien
-    listType = list(type.find({},{"_id":0,"type_name":1,"type_key":1}))
+    listType = list(type.find({},{"_id":0,"type_abr":0}))
     TypeTuple = ()
     for dict in listType:
         values = ()
         for key, value in dict.items():
             values += (str(value),)
-        TypeTuple +=(values[::-1],)
+        TypeTuple +=(values,)
     return TypeTuple
 
 
 def getEtat():
     db = dbPridectionPrix()
     etats = db.etats
-    listEtat= list(etats.find({},{"_id":0,"etat_name":1,"etat_key":1}))
+    listEtat= list(etats.find({},{"_id":0,"etat_abr":0}))
     EtatTuple = ()
     for dict in listEtat:
         values = ()
         for key, value in dict.items():
             values += (str(value),)
-        EtatTuple +=(values[::-1],)
+        EtatTuple +=(values,)
     return EtatTuple
 
 def getdistricts():

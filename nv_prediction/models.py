@@ -12,6 +12,9 @@ class predict(models.Model):
     nomberEtage = models.IntegerField(
         verbose_name="NB étages à vendre", null=True)
     surface = models.IntegerField(verbose_name="Surface",null=False)
+    surface_pc = models.IntegerField(verbose_name="Surface couvert",null=False)
+    surface_pt = models.IntegerField(verbose_name="Surface terre",null=False)
+    avec_toit = models.BooleanField()
 
     class Meta:
         abstract = True
@@ -32,19 +35,19 @@ class Prediction(models.Model):
 
 
 class PredictForm(forms.ModelForm):
-    
-    # def __init__(self,request):
-    #     return request
-    
     class Meta:
             model = predict
-            fields = ('zone', 'typeBien', 'etat', 'nomberEtage', 'surface')
+            fields = ['zone', 'typeBien', 'etat', 'nomberEtage', 'surface','surface_pc','surface_pt','avec_toit']
             widgets = {
-                'zone': forms.Select(attrs={'class': 'form-control bodytexte'}),
-                'typeBien': forms.Select(attrs={'class': 'form-control bodytexte'}),
-                'etat': forms.Select(attrs={'class': 'form-control bodytexte'}),
-                'nomberEtage': forms.NumberInput(attrs={'class': 'form-control bodytexte','placeholder': u'Nb etage + red chausser','min':1,'max': 30}),
-                'surface': forms.NumberInput(attrs={'class': 'form-control bodytexte', 'placeholder': u'surface de logement'}),
+                'zone': forms.Select(attrs={'class': 'form-control'}),
+                'typeBien': forms.Select(attrs={'class': 'form-control'}),
+                'etat': forms.Select(attrs={'class': 'form-control'}),
+                'nomberEtage': forms.NumberInput(attrs={'class': 'form-control','placeholder': u'Nb etage + red chausser','min':1,'max': 30}),
+                'surface': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': u'surface de logement'}),
+                'surface_pc': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': u'surface couvert'}),
+                'surface_pt': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': u'surface de terre reset'}),
+                'avec_toit':forms.CheckboxInput(attrs={'class': 'form-control'})
+            
             }
 
 

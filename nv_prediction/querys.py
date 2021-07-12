@@ -14,7 +14,7 @@ def getZoneList():
         values = ()
         for key, value in dict.items():
             values += (str(value),) 
-        ZoneTuple +=(values,)
+        ZoneTuple +=(values[::-1],)
     # print(ZoneTuple)
     return ZoneTuple
 
@@ -65,6 +65,7 @@ def finddistricts(value):
 
 def find(name, field,value=""):
     db = dbPridectionPrix()
+    print(name, field,value)
     coll = db[name]
     res = coll.find_one({field:value})
     return res

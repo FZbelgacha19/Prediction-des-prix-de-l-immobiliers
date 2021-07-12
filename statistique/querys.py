@@ -44,7 +44,6 @@ def LineChartData():
         x = d['_id']
         y = {'price': d['price']}
         ChartD.append({**x, **y})
-
     labels = sorted(list(set([d[next(iter(ChartD[1]))] for d in ChartD])))
 
     chartDtSet = []

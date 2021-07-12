@@ -161,7 +161,8 @@ a:hover{
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 5px !important;
+  height: 5px !important;
 }
 
 /* Track */
@@ -178,4 +179,13 @@ a:hover{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #3B4467;
+}
+
+th, td{
+  padding: 5px !important;
+}
+
+td{
+  width: 1% !important;
+  white-space: nowrap !important;
 }

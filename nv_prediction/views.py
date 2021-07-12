@@ -32,23 +32,23 @@ def main_view(request):
         resutat = "Le prix attendu est : "+str(price)+" DH."
         print(find("Zone", "zone_key", zone))
 
-        # today = date.today()
-        # p.user = request.user
-        # Pred_data = {
-        #     'zone': find("Zone", "zone_key", zone)["zone_name"],
-        #     'etat': find("etats", "etat_key", etat)["etat_name"],
-        #     'typeBien': find("type_bien", "type_key", typeBien)["type_name"],
-        #     'nomberEtage': nomberEtage,
-        #     'surface': surface,
-        #     'surface_pc': surface_pc,
-        #     'surface_pt': surface_pt,
-        #     'avec_toit':avec_toit
-        # }
-        # p.predict = Pred_data
-        # p.price = price
-        # p.mois = today.strftime("%m")
-        # p.annee = today.strftime("%Y")
-        # p.save()
+        today = date.today()
+        p.user = request.user
+        Pred_data = {
+            'zone': find("Zone", "zone_key", zone)["zone_name"],
+            'etat': find("etats", "etat_key", etat)["etat_name"],
+            'typeBien': find("type_bien", "type_key", typeBien)["type_name"],
+            'nomberEtage': nomberEtage,
+            'surface': surface,
+            'surface_pc': surface_pc,
+            'surface_pt': surface_pt,
+            'avec_toit':avec_toit
+        }
+        p.predict = Pred_data
+        p.price = price
+        p.mois = today.strftime("%m")
+        p.annee = today.strftime("%Y")
+        p.save()
 
         # insertPrediction(zone,etat,typeBien,nomberEtage,surface,price)
         

@@ -7,17 +7,18 @@
         <ul class="sidebar-nav" id="sidebar_nav">
           <li class="sidebar-header">Pages</li>
 
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="{% url 'statistique:statistique_view' %}">
-              <i class="align-middle" data-feather="sliders"></i>
-              <span class="align-middle">Statistique</span>
-            </a>
-          </li>
+          
 
           <li class="sidebar-item">
             <a class="sidebar-link" href="{% url 'user_profile:index_profile' %}">
               <i class="align-middle" data-feather="user"></i>
               <span class="align-middle">Profile</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'statistique:statistique_view' %}">
+              <i class="align-middle" data-feather="sliders"></i>
+              <span class="align-middle">Statistique</span>
             </a>
           </li>
           <li class="sidebar-item">
@@ -30,6 +31,12 @@
             <a class="sidebar-link" href="{% url 'immeubles:immeubles_view' %}">
               <i class="align-middle" data-feather="pie-chart"></i>
               <span class="align-middle">Immeubles</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="{% url 'immeubles:immeubles_view' %}">
+              <i class="align-middle" data-feather="shuffle"></i>
+              <span class="align-middle">Comparaison</span>
             </a>
           </li>
 

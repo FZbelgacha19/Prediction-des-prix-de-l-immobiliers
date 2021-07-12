@@ -62,6 +62,9 @@ Nouveau Prédiction
         <th>etat</th>
         <th>Etage</th>
         <th>Surface</th>
+        <th>Surface couvert</th>
+        <th>Surface terre</th>
+        <th>Avec Toit</th>
         <th>Prix</th>
         <th>Date</th>
       </thead>
@@ -73,6 +76,9 @@ Nouveau Prédiction
           <td>{{d.predict.etat}}</td>
           <td>{{d.predict.nomberEtage}}</td>
           <td>{{d.predict.surface}} m²</td>
+          <td>{{d.predict.surface_pc}} m²</td>
+          <td>{{d.predict.surface_pt}} m²</td>
+          <td>{{d.predict.avec_toit}}</td>
           <td>{{d.price}} DH</td>
           <td>{{d.mois}}/{{d.annee}}</td>
         </tr>

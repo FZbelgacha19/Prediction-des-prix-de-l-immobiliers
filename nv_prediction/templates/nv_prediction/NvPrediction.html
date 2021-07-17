@@ -16,15 +16,11 @@
     <form method="POST" for="NV_Pred_Form">
       {% csrf_token %}
 
-      <div class="row p-3">
+      <div class="row p-3 d-flex align-items-start">
         <div class="col texte">
           <label>Zone (adresse) </label>
           {{form.zone}}
-          <small
-            ><a href="{% url 'nv_prediction:district' %}"
-              >voir votre zone</a
-            ></small
-          >
+          <small><a href="{% url 'nv_prediction:district' %}">voir votre zone</a></small>
         </div>
         <div class="col texte">
         
@@ -33,7 +29,7 @@
          
       </div>
 
-      <div class="row p-3">
+      <div class="row p-3 d-flex align-items-end">
       <div class="col texte">
           <label>Type de Bien</label>
           {{form.typeBien}}
@@ -47,7 +43,7 @@
         {{form.avec_toit}}
         </div>
       </div>
-      <div class="row p-3">
+      <div class="row p-3 d-flex align-items-end">
         <div class="col texte">
         <label>Surface</label>
         {{form.surface}}

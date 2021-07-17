@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% load crispy_forms_tags %}
+
+{% load static %}
+{% block page_title %}
+Nouveau Prédiction
+{% endblock page_title %}
+
+
+{% block content %}
+
+<main class="content bg-cover-1 scrolling">
+  <div class="container-fluid p-0">
+    <div class="mb-5">
+      <h1>
+        <span class="txt-MontserratBold txt-30 txt-space-cadet">Comparaison</span>
+      </h1>
+    </div>
+<div class="DivScroll bg-light">
+    {% for d in data %}
+    <div class="d-flex align-items-center m-2 rounded-3 bg-white comparaison">
+        <div class="flex-shrink-1">
+            <img src="{% static 'img/compare/' %}{{d.img_index}}" alt="maison" width="350" height="350" class="rounded-start"/>
+        </div>
+        <div class="flex-grow-1 ms-3">
+            <p><b>zone : </b>{{d.zone}},&emsp;<b>type de bien : </b>{{d.type}}</p>
+            <p><b>etat : </b>{{d.etat}}</p>
+            <p><b>Nomber des etages : </b>{{d.etage}},&emsp;<b>avec Toit : </b>{{d.avec_toit}}</p>
+            <p><b>Surface Totale : </b>{{d.surface}} m²,&emsp;<b>Surface couvert : </b>{{d.Su_Cov}} m² ,&emsp;<b>Surface de terre : </b>{{d.Su_terr}}  m²</p>
+            <p><b>Prix demandé : </b>{{d.prix_reel}} DH,&emsp;<b>Prix prédicté : </b>{{d.prix_pred}} DH</p>
+            <small><b>Pour plus d'information : </b> <a href="{{d.site}}" target="_blank">click ici</a></small>
+        </div>
+    </div>
+    
+    {% endfor %}
+</div>
+  </div>
+</main>
+
+{% endblock content %}

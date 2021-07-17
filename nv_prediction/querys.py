@@ -14,7 +14,8 @@ def getZoneList():
         values = ()
         for key, value in dict.items():
             values += (str(value),) 
-        ZoneTuple +=(values[::-1],)
+        ZoneTuple +=(values,)
+        # ZoneTuple +=(values[::-1],)
     # print(ZoneTuple)
     return ZoneTuple
 

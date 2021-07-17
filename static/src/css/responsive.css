@@ -1,0 +1,35 @@
+@media (max-width: 576px) {
+  .txt-10 {
+    font-size: 5px !important;
+  }
+  .txt-12 {
+    font-size: 7px !important;
+  }
+  .txt-14 {
+    font-size: 9px !important;
+  }
+  .txt-16 {
+    font-size: 11px !important;
+  }
+  .txt-18 {
+    font-size: 13px !important;
+  }
+  .txt-20 {
+    font-size: 15px !important;
+  }
+  .txt-22 {
+    font-size: 17px !important;
+  }
+  .txt-24 {
+    font-size: 19px !important;
+  }
+  .txt-26 {
+    font-size: 21px !important;
+  }
+  .txt-28 {
+    font-size: 23px !important;
+  }
+  .txt-30 {
+    font-size: 25px !important;
+  }
+}

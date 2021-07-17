@@ -46,10 +46,11 @@ INSTALLED_APPS = [
     
     #New apps
     'nv_prediction',
-     'accounts',
-     'user_profile',
-     'immeubles',
-     'statistique'
+    'accounts',
+    'user_profile',
+    'immeubles',
+    'statistique',
+    'comparaison'
 ]
 
 MIDDLEWARE = [

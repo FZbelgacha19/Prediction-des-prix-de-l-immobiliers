@@ -31,6 +31,7 @@ urlpatterns = [
     path('user/', include('user_profile.urls')),
     path('immeubles/', include('immeubles.urls')),
     path('statistique/', include('statistique.urls')),
+    path('comparaison/', include('comparaison.urls')),
     # path('base/', views.base, name='base'),
 ]
 

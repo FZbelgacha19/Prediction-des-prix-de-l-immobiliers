@@ -1,0 +1,8 @@
+@media (max-width: 576px) {
+    @each $key, $value in $text-size{
+        .txt-#{$key} {
+          @include text-size(($value - 5));
+        }
+    }
+    
+}

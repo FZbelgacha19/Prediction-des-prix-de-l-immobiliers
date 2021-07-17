@@ -19,7 +19,7 @@ Statistique
         </canvas>
     </div>
 
-  <div class="row bg-light mt-5">
+  <div class="row bg-light mt-5 statistique">
     <div class="col">
         <div class="chart chart-xs">
             <canvas id="Pie_chart_District" class="chartjs-render-monitor">
@@ -74,6 +74,11 @@ Statistique
               title: {
                   display: true,
                   text: 'Variante des prix par les années selon les districts'
+              },
+              legend: {
+                labels: {
+                  usePointStyle: true,
+                }
               }
             }
           }
@@ -107,6 +112,11 @@ Statistique
               title: {
                   display: true,
                   text: 'District plus dominant'
+              },
+              legend: {
+                labels: {
+                  usePointStyle: true,
+                }
               }
             }
           },
@@ -141,6 +151,11 @@ Statistique
               title: {
                   display: true,
                   text: 'Type de bien plus dominant'
+              },
+              legend: {
+                labels: {
+                  usePointStyle: true,
+                }
               }
             }
           },

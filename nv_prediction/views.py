@@ -3,7 +3,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render
 # from .forms import predictForm
 from .models import PredictForm, Prediction
-from .algorithm import get_price
+from .algorithm import get_price, get_Models
 from .querys import getdistricts, finddistricts, find
 from datetime import date, datetime
 
@@ -27,7 +27,8 @@ def main_view(request):
         avec_toit = request.POST['avec_toit']
 # [90, 6, 1, 2, 600, 450, 150, 4150000]
         donnees= [zone,typeBien,etat,nomberEtage,surface,surface_pc,surface_pt]
-        price = get_price(donnees,avec_toit)
+        svc_pc, svc_pt, rdf_pc, rdf_pt = get_Models()
+        price = get_price(donnees,avec_toit,svc_pc, svc_pt, rdf_pc, rdf_pt)
 
         resutat = "Le prix attendu est : "+str(price)+" DH."
         print(find("Zone", "zone_key", zone))

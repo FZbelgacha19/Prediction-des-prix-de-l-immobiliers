@@ -9,6 +9,8 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
+from sklearn.ensemble import BaggingClassifier, RandomForestClassifier
+from sklearn.multiclass import OneVsRestClassifier
 
 def getDataFrame():
     client = MongoClient('localhost:27017')
@@ -81,12 +83,13 @@ def RFClassif(x,y):
     r.fit(x, y)
     return r
 
+
 def SVClassif(x,y):
     s = make_pipeline(StandardScaler(), SVC())
     s.fit(x, y)
     return s
 
-def get_price(L_test,avec_toit):
+def get_Models():
     dataframe = getDataFrame()
     X, Y_pc, Y_pt = train_x_y(dataframe)
     rdf_pc = RFClassif(X,Y_pc)
@@ -94,6 +97,11 @@ def get_price(L_test,avec_toit):
 
     svc_pc = SVClassif(X,Y_pc)
     svc_pt = SVClassif(X,Y_pt)
+
+    return svc_pc, svc_pt, rdf_pc, rdf_pt
+
+def get_price(L_test,avec_toit,svc_pc, svc_pt, rdf_pc, rdf_pt):
+
     # [zone-0,typeBien-1,etat-2,nomberEtage-3,surface-4,surface_pc-5,surface_pt-6]
     rdf_pc_pred = predicts(rdf_pc,L_test[0], L_test[1],L_test[2],L_test[3])
     svc_pc_pred = predicts(svc_pc,L_test[0], L_test[1],L_test[2],L_test[3])

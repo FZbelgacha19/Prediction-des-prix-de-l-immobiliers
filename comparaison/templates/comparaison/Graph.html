@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+
+{% block page_title %}
+Comparaison (Graph)
+{% endblock page_title %}
+
+
+{% block content %}
+
+<main class="content bg-cover-1">
+  <div class="container-fluid px-5 mt-5">
+    <div class="mb-5">
+        <h1><span class="txt-MontserratBold txt-30 txt-space-cadet">Statistiques</span></h1>
+    </div>
+    <div class="shadow rounded bg-body">
+        <canvas id="Scatter_chart">
+        Your browser does not support the canvas tag
+        </canvas>
+    </div>
+  </div>
+</main>
+
+{% endblock content %}
+
+{% block script %}
+<script type="text/javascript">
+    var Scatter_chart = document.getElementById('Scatter_chart');
+    var Scatter = Scatter_chart.getContext('2d');
+    var ScatterChart = new Chart(Scatter, {
+        type: 'scatter',
+        data: {
+        labels: {{ScatterLabels|safe}},
+        datasets:[
+            {% for d in ScatterDatasets  %}
+                {
+                data: [{% for l in d.data %}{x: {{l.x}}, y: {{l.y}}}, {% endfor %}],
+                label:"{{d.label}}",
+                borderColor:"{{d.borderColor}}",
+                backgroundColor:"{{d.backgroundColor}}",
+                borderWidth:1
+                },
+            {% endfor %}
+        ]
+        },
+        options: {
+            plugins:
+                    {
+                    title: {
+                        display: true,
+                        text: 'Comparaison des prixs'
+                    },
+                    legend: {
+                        labels: {
+                            usePointStyle: true,
+                        }
+                    }
+                },
+            scaleShowValues: true,
+            scales: {
+                xAxes: [{
+                ticks: {
+                    autoSkip: false
+                }
+                }]
+            }
+        }
+    });
+
+</script>
+{% endblock script %}

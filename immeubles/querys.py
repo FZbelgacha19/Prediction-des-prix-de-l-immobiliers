@@ -3,7 +3,7 @@ from seaborn import color_palette
 from operator import itemgetter
 from itertools import groupby
 import re
-from pymongo import MongoClient
+from pymongo import MongoClient, DESCENDING
 
 
 def dbPridectionPrix():
@@ -14,7 +14,7 @@ def dbPridectionPrix():
 def getPredictionData(user_id):
     db = dbPridectionPrix()
     coll = db.nv_prediction_prediction
-    return list(coll.find({"$query" : {"user_id": user_id}, "$orderby": { "annee": -1 } }))
+    return list(coll.find({"$query" : {"user_id": user_id}, "$orderby": {"annee": -1,"mois":1}}))
 
 
 def filterBylist(user_id):

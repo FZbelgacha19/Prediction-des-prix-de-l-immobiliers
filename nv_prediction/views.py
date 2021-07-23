@@ -58,7 +58,7 @@ def main_view(request):
     request.session['value'] = " "
     return render(request, 'nv_prediction/NvPrediction.html', {'form': form})
 
-
+@login_required
 def district_view(request):
 
     if request.method == "POST":

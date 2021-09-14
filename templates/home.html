@@ -1,11 +1,37 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+home page
+{% endblock page_title %}
+
+{% block content %}
 
 <main class="content bg-cover-1">
   <div class="container-fluid p-0">
   
-  homme
-  
+  <div class="mb-5">
+      <h1>
+        <span class="txt-MontserratBold txt-30 txt-space-cadet">Prédiction prix des immobiliers</span>
+      </h1>
+    </div>
+  <div class="row">
+  <div class="col">
+        <p class="txt-MontserratRegular ms-5">l'application web Prédiction prix des immobiliers vous aidez pour prédire le prix d'un appartement</p>
+        <p class="txt-MontserratRegular ms-5">d’une manière exacte.</p>
+        <p class="txt-MontserratRegular ms-5">Vous pouvez : </p>
+        <p class="txt-MontserratRegular ms-5">
+        <i class="align-middle me-2 txt-jasmine" data-feather="arrow-right"></i>Créé une espace utilisateur<br/>
+        <i class="align-middle me-2 txt-jasmine" data-feather="arrow-right"></i>Prédire le prix d’un appartement<br/>
+        <i class="align-middle me-2 txt-jasmine" data-feather="arrow-right"></i>Voir les prédictions enregistre dans le système<br/>
+        <i class="align-middle me-2 txt-jasmine" data-feather="arrow-right"></i>Voir les Statistiques </p>
+        </div>
+  <div class="col">
+    <img src="{% static 'img/photos/Building.svg' %}" 
+    alt="maison" width="450" height="450" class="rounded-start"/>
   </div>
+  </div>
+        
 </main>
 
 {% endblock content %}

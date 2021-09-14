@@ -254,8 +254,22 @@ td {
   }
 }
 
-/* @media (max-width: 992px) {
+@media (min-height: 900px) {
+  .DivScroll{
+    height: 660px !important;
+  }
 }
+@media (min-height: 1200px) {
+  .DivScroll{
+    height: 920px !important;
+  }
+}
+@media (min-height: 1440px) {
+  .DivScroll{
+    height: 1140px !important;
+  }
+}
+/*
 @media (max-width: 1200px) {
 
 }
@@ -286,4 +300,8 @@ td {
 
 .height_100{
   height: 100% !important;
+}
+
+.mx-auto{
+  margin-top: 5% !important;
 }

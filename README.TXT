@@ -14,6 +14,7 @@ Les packages utilisés dans ce projet:
 
     > Le package Scikit Learn
         pip install -U scikit-learn
+        
     > Package qui nous permet de lier le projet avec une base donner NoSQL
         pip install djongo
     

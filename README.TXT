@@ -14,12 +14,12 @@ Les packages utilisés dans ce projet:
 
     > Le package Scikit Learn
         pip install -U scikit-learn
-        
+
     > Package qui nous permet de lier le projet avec une base donner NoSQL
         pip install djongo
     
     >Package permet d'uitiliser les commandes de MongoDB:
-        python -m pip install pymongo
+        pip install pymongo
 
     > Package de nettoyage les images dupliquer
         pip install django-cleanup
